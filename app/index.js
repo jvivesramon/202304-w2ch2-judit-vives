@@ -1,21 +1,6 @@
-const strictEquals = (valueA, valueB) => {
-  const equalResult = Object.is(valueA, valueB);
+import { strictEquals } from "./boleanFunction/index.js";
 
-  if (isNaN(valueA) && !valueA) {
-    if (isNaN(valueB) && !valueB) {
-      return !equalResult;
-    }
-  }
+let valueA = 0;
+let valueB = -0;
 
-  if (!isNaN(valueA) && !valueA) {
-    if (!isNaN(valueB) && !valueB) {
-      if (Object.is(valueA, valueB)) {
-        return equalResult;
-      }
-
-      return !equalResult;
-    }
-  }
-
-  return equalResult;
-};
+console.log(strictEquals(valueA, valueB));
